@@ -1,0 +1,22 @@
+services:
+    db:
+      image: postgres
+      restart: always
+      environment:
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+        POSTGRES_DB: grade
+      ports:
+        - "5444:5432"
+      volumes:
+        - postgres_data:/var/lib/postgresql/data
+    app:
+      build: .
+      depends_on:
+        - db
+      environment:
+        DATABASE_URL: postgres://postgres:postgres@db:5432/grade?sslmode=disable
+      ports:
+        - "1323:1323"
+volumes:
+    postgres_data:
