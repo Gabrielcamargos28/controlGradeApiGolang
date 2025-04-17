@@ -1,8 +1,8 @@
-package test
+package proof
 
 import "gradeControleApi/model/discipline"
 
-type Test struct {
+type Proof struct {
 	Id         int
 	Name       string
 	Discipline discipline.Discipline

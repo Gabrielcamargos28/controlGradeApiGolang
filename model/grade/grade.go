@@ -1,9 +1,9 @@
 package grade
 
-import "gradeControleApi/model/test"
+import "gradeControleApi/model/proof"
 
 type Grade struct {
 	Id    int
 	Score float64
-	Test  test.Test
+	Proof proof.Proof
 }

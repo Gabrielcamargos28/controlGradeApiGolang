@@ -18,7 +18,7 @@ func main() {
 	err = database.Connect()
 
 	if err != nil {
-		log.Fatal("Error ao conectar no banco:", err)
+		log.Fatal("Connection database error:", err)
 	}
 	defer database.Close()
 

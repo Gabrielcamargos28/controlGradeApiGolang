@@ -1,6 +1,6 @@
 package grade
 
 type GradeRequest struct {
-	Score  float64 `json:"score"`
-	TestId float64 `json:"test_id"`
+	Score   float64 `json:"score"`
+	ProofId float64 `json:"proof_id"`
 }
